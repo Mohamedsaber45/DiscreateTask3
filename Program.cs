@@ -4,29 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project_perfect_number_
+namespace Project_prime_number_
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter v");
-            long v = long.Parse(Console.ReadLine());
-            Console.WriteLine("Enter num");
-            for (int num = int.Parse(Console.ReadLine()); num <= v; num++)
+            Console.WriteLine("Enter number");
+            for (int num = 5; num <= 100; num++)
             {
-                int sum = 0;
-                for (int i = 1; i < num; i++)
+                int count = 0;
+                for (int p = 1; p < num; p++)
                 {
 
-                    if (num % i == 0)
+                    if (num % p == 0)
                     {
-                        sum += i;
+                        count += 1;
+
                     }
                 }
-                if (sum == num)
+                if (count < 2)
                 {
                     Console.WriteLine(num);
+
                 }
 
             }
